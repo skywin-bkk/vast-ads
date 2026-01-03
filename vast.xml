@@ -1,47 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VAST version="3.0">
-  <Ad id="skippable-ad-001">
+  <Ad id="global-ad-001">
     <InLine>
-      <AdSystem>MyAdServer</AdSystem>
-      <AdTitle>Skippable Video Ad</AdTitle>
+      <AdSystem>UniversalAdServer</AdSystem>
+      <AdTitle>Universal Skippable Video Ad</AdTitle>
 
+      <!-- Impression -->
       <Impression><![CDATA[
-        https://example.com/track/impression
+        https://mmflix.live/track/impression
       ]]></Impression>
 
       <Creatives>
         <Creative>
+          <!-- Skip appears after 5 seconds -->
           <Linear skipoffset="00:00:05">
-            <!-- Video duration -->
+
+            <!-- MUST match video length -->
             <Duration>00:00:15</Duration>
 
-            <!-- Tracking -->
+            <!-- Tracking (safe for all players) -->
             <TrackingEvents>
               <Tracking event="start"><![CDATA[
-                https://example.com/track/start
+                https://mmflix.live/track/start
+              ]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[
+                https://mmflix.live/track/first
+              ]]></Tracking>
+              <Tracking event="midpoint"><![CDATA[
+                https://mmflix.live/track/mid
+              ]]></Tracking>
+              <Tracking event="thirdQuartile"><![CDATA[
+                https://mmflix.live/track/third
               ]]></Tracking>
               <Tracking event="skip"><![CDATA[
-                https://example.com/track/skip
+                https://mmflix.live/track/skip
               ]]></Tracking>
               <Tracking event="complete"><![CDATA[
-                https://example.com/track/complete
+                https://mmflix.live/track/complete
               ]]></Tracking>
             </TrackingEvents>
 
-            <!-- Click -->
+            <!-- Clickthrough -->
             <VideoClicks>
               <ClickThrough><![CDATA[
-                https://example.com/click
+                https://mmflix.live/click
               ]]></ClickThrough>
             </VideoClicks>
 
-            <!-- Media -->
+            <!-- Media file (CRITICAL) -->
             <MediaFiles>
               <MediaFile
+                id="mp4-720p"
                 delivery="progressive"
                 type="video/mp4"
                 width="1280"
-                height="720">
+                height="720"
+                scalable="true"
+                maintainAspectRatio="true">
                 <![CDATA[
                   https://mmflix.live/storage/video/ads01.mp4
                 ]]>
