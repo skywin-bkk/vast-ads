@@ -7,7 +7,7 @@
 
       <!-- Impression -->
       <Impression><![CDATA[
-        https://mmflix.live/track/impression
+        https://ads.yourdomain.com/track/impression
       ]]></Impression>
 
       <Creatives>
@@ -21,29 +21,29 @@
             <!-- Tracking (safe for all players) -->
             <TrackingEvents>
               <Tracking event="start"><![CDATA[
-                https://mmflix.live/track/start
+                https://ads.yourdomain.com/track/start
               ]]></Tracking>
               <Tracking event="firstQuartile"><![CDATA[
-                https://mmflix.live/track/first
+                https://ads.yourdomain.com/track/first
               ]]></Tracking>
               <Tracking event="midpoint"><![CDATA[
-                https://mmflix.live/track/mid
+                https://ads.yourdomain.com/track/mid
               ]]></Tracking>
               <Tracking event="thirdQuartile"><![CDATA[
-                https://mmflix.live/track/third
+                https://ads.yourdomain.com/track/third
               ]]></Tracking>
               <Tracking event="skip"><![CDATA[
-                https://mmflix.live/track/skip
+                https://ads.yourdomain.com/track/skip
               ]]></Tracking>
               <Tracking event="complete"><![CDATA[
-                https://mmflix.live/track/complete
+                https://ads.yourdomain.com/track/complete
               ]]></Tracking>
             </TrackingEvents>
 
             <!-- Clickthrough -->
             <VideoClicks>
               <ClickThrough><![CDATA[
-                https://mmflix.live/click
+                https://yourdomain.com/click
               ]]></ClickThrough>
             </VideoClicks>
 
@@ -58,7 +58,7 @@
                 scalable="true"
                 maintainAspectRatio="true">
                 <![CDATA[
-                  https://mmflix.live/storage/video/ads01.mp4
+                  https://basil79.github.io/vast-sample-tags/pg/24.mp4
                 ]]>
               </MediaFile>
             </MediaFiles>
