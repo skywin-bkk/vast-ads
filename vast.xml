@@ -1,56 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VAST version="3.0">
-  <Ad id="sample-ad-001">
+  <Ad id="skippable-ad-001">
     <InLine>
       <AdSystem>MyAdServer</AdSystem>
-      <AdTitle>Sample VAST Video Ad</AdTitle>
+      <AdTitle>Skippable Video Ad</AdTitle>
 
-      <!-- Impression tracking -->
       <Impression><![CDATA[
         https://example.com/track/impression
       ]]></Impression>
 
       <Creatives>
         <Creative>
-          <Linear>
+          <Linear skipoffset="00:00:05">
             <!-- Video duration -->
             <Duration>00:00:15</Duration>
 
-            <!-- Tracking events -->
+            <!-- Tracking -->
             <TrackingEvents>
               <Tracking event="start"><![CDATA[
                 https://example.com/track/start
               ]]></Tracking>
-              <Tracking event="firstQuartile"><![CDATA[
-                https://example.com/track/first
-              ]]></Tracking>
-              <Tracking event="midpoint"><![CDATA[
-                https://example.com/track/mid
-              ]]></Tracking>
-              <Tracking event="thirdQuartile"><![CDATA[
-                https://example.com/track/third
+              <Tracking event="skip"><![CDATA[
+                https://example.com/track/skip
               ]]></Tracking>
               <Tracking event="complete"><![CDATA[
                 https://example.com/track/complete
               ]]></Tracking>
             </TrackingEvents>
 
-            <!-- Click-through -->
+            <!-- Click -->
             <VideoClicks>
               <ClickThrough><![CDATA[
                 https://example.com/click
               ]]></ClickThrough>
             </VideoClicks>
 
-            <!-- Video file -->
+            <!-- Media -->
             <MediaFiles>
               <MediaFile
                 delivery="progressive"
                 type="video/mp4"
                 width="1280"
-                height="720"
-                scalable="true"
-                maintainAspectRatio="true">
+                height="720">
                 <![CDATA[
                   https://mmflix.live/storage/video/ads01.mp4
                 ]]>
